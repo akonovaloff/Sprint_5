@@ -42,6 +42,7 @@ def login_user(driver, generated_user):
     """Фикстура для логина пользователя после регистрации"""
     email, password = generated_user
     driver.get(URLs.LOGIN_PAGE)
+    WebDriverWait(driver, 3).until(ec.visibility_of_element_located(*LoginPageLocators.LOGIN_SUBMIT_BUTTON))
     driver.find_element(*LoginPageLocators.EMAIL_INPUT).send_keys(email)
     driver.find_element(*LoginPageLocators.PASSWORD_INPUT).send_keys(password)
     driver.find_element(*LoginPageLocators.LOGIN_SUBMIT_BUTTON).click()

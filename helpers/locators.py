@@ -1,10 +1,10 @@
 from selenium.webdriver.common.by import By
-
-
-class Locators:
-    login_form_email = (By.XPATH, '//form//input[@name="name"]')
-    login_form_password = (By.XPATH, '//form//input[@name="Пароль"]')
-    login_form_button = (By.XPATH, '//form/button[text()="Войти"]')
+#
+#
+# class Locators:
+#     login_form_email = (By.XPATH, '//form//input[@name="name"]')
+#     login_form_password = (By.XPATH, '//form//input[@name="Пароль"]')
+#     login_form_button = (By.XPATH, '//form/button[text()="Войти"]')
 
 class MainPageLocators:
     # Кнопка "Войти в аккаунт" на главной странице
