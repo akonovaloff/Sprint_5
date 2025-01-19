@@ -45,7 +45,6 @@ def login_user(driver, generated_user):
     driver.find_element(*LoginPageLocators.EMAIL_INPUT).send_keys(email)
     driver.find_element(*LoginPageLocators.PASSWORD_INPUT).send_keys(password)
     driver.find_element(*LoginPageLocators.LOGIN_SUBMIT_BUTTON).click()
-    #WebDriverWait(driver, 3).until(ec.url_to_be(URLs.BASE_URL))
     WebDriverWait(driver, 3).until(ec.visibility_of_element_located(*ConstructorLocators.BURGER_INGREDIENTS_SECTION))
     return email, password
 
